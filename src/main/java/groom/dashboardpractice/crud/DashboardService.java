@@ -20,7 +20,7 @@ public class DashboardService {
 
 //    isPresent 검사 없음.
 //    Todo : 조건 분기 추가
-    public Post findPostById(int id) {
+    public Post findPostById(long id) {
         return dashboardRepository.findById(id).get();
     }
 
@@ -31,7 +31,7 @@ public class DashboardService {
         return dashboardRepository.existsById(post.getId());
     }
 
-    public Boolean deletePostById(int id) {
+    public Boolean deletePostById(long id) {
         if (dashboardRepository.existsById(id)) {
             dashboardRepository.deleteById(id);
             return true;

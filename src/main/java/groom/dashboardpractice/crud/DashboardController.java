@@ -5,6 +5,7 @@ import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
+@CrossOrigin
 @RequiredArgsConstructor
 @RestController
 public class DashboardController {
@@ -21,7 +22,7 @@ public class DashboardController {
     }
 
     @RequestMapping(value = "/post", method = RequestMethod.GET)
-    public List<Post> getPostList(@RequestBody Post post) {
+    public List<Post> getPostList() {
         return dashboardService.findPostAll();
     }
 
