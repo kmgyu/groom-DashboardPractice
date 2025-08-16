@@ -1,10 +1,12 @@
 package groom.dashboardpractice.example;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 import java.util.Map;
 
 @Component
+@Qualifier("inMemoryMessageRepository")
 public class InMemoryMessageRepository implements MessageRepository {
     private final Map<String,String> messages;
 
