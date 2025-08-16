@@ -9,10 +9,10 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class AppConfig {
-    @Bean
-    MessageRepository messageRepository(GreetProperties props) {
-        return new InMemoryMessageRepository(props.getMessages());
-    }
+//    @Bean
+//    MessageRepository messageRepository(GreetProperties props) {
+//        return new InMemoryMessageRepository(props.getMessages());
+//    }
 
     @Bean
     GreetingService greetingService(MessageRepository repo, GreetProperties props) {

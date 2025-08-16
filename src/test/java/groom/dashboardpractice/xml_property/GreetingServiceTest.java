@@ -18,6 +18,7 @@ public class GreetingServiceTest {
     void wiring_and_behavior() {
         Assertions.assertThat(props.getPrefix()).isEqualTo("[DEV]");
         Assertions.assertThat(greetingService.greet("Minkyu"))
-                .isEqualTo("[DEV] Hello, Minkyu");
+//                .isEqualTo("[DEV] Hello, Minkyu");
+                .isEqualTo("[DEV] DB Hello, Minkyu"); // primary가 DB라 DB Hello로 바뀐다.
     }
 }
