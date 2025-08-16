@@ -1,0 +1,9 @@
+app:
+  greet:
+    prefix: "[DEV]"
+    messages:
+      greet: "Hello, %s"
+      bye: "Bye, %s"
+spring:
+  main:
+    banner-mode: "off"
