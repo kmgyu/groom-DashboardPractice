@@ -13,14 +13,14 @@ public class LifeCycleTest {
 
 
     @Autowired
-    ApplicationContext ctx;
+    ApplicationContext ac;
 
     @Autowired
     LifeCycleBean bean;
 
     @Test
     void testLifeCycle() {
-        LifeCycleBean bean2 = ctx.getBean(LifeCycleBean.class);
+        LifeCycleBean bean2 = ac.getBean(LifeCycleBean.class);
         assertThat(bean).isSameAs(bean2);   // 같은 인스턴스여야 함
         bean.destroy();
     }
